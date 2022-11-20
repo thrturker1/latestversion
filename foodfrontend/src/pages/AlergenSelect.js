@@ -1,10 +1,10 @@
-import React from 'react'
-
+import React from 'react';
+import Appbar from './components/Appbar';
 const AlergenSelect = () => {
 
     return(
     <div>
-        This is the Alergen Select page.
+        <Appbar/>
     </div>
     );
 }

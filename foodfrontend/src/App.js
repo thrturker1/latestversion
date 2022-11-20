@@ -1,25 +1,14 @@
 import './App.css';
 import React from 'react';
 import AlergenSelect from './pages/AlergenSelect';
-import AdminPage from './pages/AdminPage';
-import FoodsPage from './pages/FoodsPage';
-
+import { Appbar } from '@react-native-material/core';
+import { Button } from "@react-native-material/core";
 
 function App() {
   return (
     <div className="App">
      <AlergenSelect/>
-     <button>
-      tikla
-     </button>
-     <AdminPage/>
-     <button>
-      tiklama
-     </button>
-     <FoodsPage/>
-     <button>
-      naber mudur
-     </button>
+     <Appbar title = "Title"/>
     </div>
   );
 }
