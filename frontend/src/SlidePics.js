@@ -1,18 +1,15 @@
-import ImageSlider, { Slide } from "react-auto-image-slider";
+const divStyle = {
+ color : "blue",
+ width : "200px",
+ height: "200px",
+ marginLeft: "200px",
+};
 
 function Slideshow() {
   return (
-    <ImageSlider effectDelay={500} autoPlayDelay={1000}>
-      <Slide>
-        <img alt="img2" src="slayt1.jpg" />
-      </Slide>
-      <Slide>
-        <img alt="img2" src="slayt2.png" />
-      </Slide>
-      <Slide>
-        <img alt="img1" src="slayt3.png" />
-      </Slide>
-    </ImageSlider>
+    <div style = {divStyle}>
+      Naber la kerkenez
+    </div>
   );
 }
 
