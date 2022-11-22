@@ -3,6 +3,7 @@ import Header from './components/Header';
 import { Typography } from "@mui/material";
 import CheckBox from "./components/CheckBox";
 import ImageSlider from "./components/ImageSlider";
+import EnterButton from "./components/EnterButton.js";
 
 const App = () => {
   const slides = [
@@ -32,7 +33,10 @@ const App = () => {
             
         </div>
         <CheckBox/>
+        <EnterButton/>
     </div>
+
+    
   );
 };
 
