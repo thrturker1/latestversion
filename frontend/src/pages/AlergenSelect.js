@@ -27,10 +27,6 @@ const App = () => {
         <div style = { navbarStyle }>
         <Header/>
         </div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
         <div style={containerStyles}>
             <ImageSlider slides={slides} />
             

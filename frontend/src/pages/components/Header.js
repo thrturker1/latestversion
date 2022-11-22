@@ -55,7 +55,7 @@ const Header = () => {
             <AppBar sx = {{background : '#B22222' }}>
                 <Toolbar>
                         <Person4 sx = {{marginRight : "10px"}}/>
-                        <p>Yewek Sepeti</p>
+                        <p>GüvenleYe</p>
 
                         <Search className = 'Search'>
                             <SearchIconWrapper>
