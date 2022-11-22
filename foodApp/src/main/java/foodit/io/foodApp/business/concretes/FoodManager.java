@@ -54,6 +54,7 @@ public class FoodManager implements FoodService{
 			newFood.setCompanyName(food.getCompanyName());
 			newFood.setAlergens(food.getAlergens());
 			newFood.setFoodType(food.getFoodType());
+			newFood.setImage(food.getImage());
 			
 			return foodRepository.save(newFood);
 		}

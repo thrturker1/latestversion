@@ -1,20 +1,43 @@
 import React from "react";
 import Header from './components/Header';
-import SlidePics from './components/SlidePics';
 import { Typography } from "@mui/material";
 import CheckBox from "./components/CheckBox";
-const AlergenSelect = () => {
+import ImageSlider from "./components/ImageSlider";
 
-    return (
+const App = () => {
+  const slides = [
+    { url: "http://localhost:3000/slaytlar/slayt1.png", title: "beach" },
+    { url: "http://localhost:3000/slaytlar/slayt2.png", title: "boat" },
+    { url: "http://localhost:3000/slaytlar/slayt3.png", title: "forest" },
+    { url: "http://localhost:3000/slaytlar/slayt4.png", title: "city" },
+    { url: "http://localhost:3000/slaytlar/slayt5.png", title: "italy" },
+  ];
+  const containerStyles = {
+    width: "500px",
+    height: "280px",
+    margin: "0 auto",
+  };
 
-        <div>
-            <Typography>
+  const navbarStyle = {
+    margin:"0 auto",
+  };
 
-                <CheckBox />
-            </Typography>
+  return (
+    <div>
+        <div style = { navbarStyle }>
+        <Header/>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div style={containerStyles}>
+            <ImageSlider slides={slides} />
+            
+        </div>
+        <CheckBox/>
+    </div>
+  );
+};
 
-    );
-}
-
-export default AlergenSelect;
+export default App;

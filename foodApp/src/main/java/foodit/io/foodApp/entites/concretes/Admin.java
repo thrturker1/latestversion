@@ -31,4 +31,7 @@ public class Admin {
 	
 	@Column(name = "email")
 	private String email;
+	
+	@Column(name = "statue")
+	private String statue;
 }

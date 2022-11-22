@@ -40,4 +40,7 @@ public class Food {
 	
 	@Column(name = "type")
 	private String foodType;
+	
+	@Column(name = "image")
+	private String image;
 }

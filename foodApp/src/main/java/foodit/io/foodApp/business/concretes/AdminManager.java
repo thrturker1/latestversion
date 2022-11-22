@@ -47,6 +47,7 @@ public class AdminManager implements AdminService{
 			newAdmin.setFirstName(admin.getFirstName());
 			newAdmin.setLastName(admin.getLastName());
 			newAdmin.setEmail(admin.getEmail());
+			newAdmin.setStatue(admin.getStatue());
 			
 			return adminRepository.save(newAdmin);
 		}
