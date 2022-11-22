@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState , useEffect } from "react";
 import Header from './components/Header';
 import { Typography } from "@mui/material";
 import CheckBox from "./components/CheckBox";
@@ -6,6 +6,8 @@ import ImageSlider from "./components/ImageSlider";
 import EnterButton from "./components/EnterButton.js";
 
 const App = () => {
+  const [alergens, setAlergens] = useState([]);
+
   const slides = [
     { url: "http://localhost:3000/slaytlar/slayt1.png", title: "beach" },
     { url: "http://localhost:3000/slaytlar/slayt2.png", title: "boat" },
@@ -13,6 +15,7 @@ const App = () => {
     { url: "http://localhost:3000/slaytlar/slayt4.png", title: "city" },
     { url: "http://localhost:3000/slaytlar/slayt5.png", title: "italy" },
   ];
+
   const containerStyles = {
     width: "500px",
     height: "280px",
@@ -32,7 +35,7 @@ const App = () => {
             <ImageSlider slides={slides} />
             
         </div>
-        <CheckBox/>
+        {alergens} = <CheckBox/>
         <EnterButton/>
     </div>
 

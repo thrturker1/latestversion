@@ -13,21 +13,23 @@ export default function CheckboxLabels () {
     .then(response => setAlergens(response))
 } , [])
 
+  const handleChange = (data) => {
+
+  }
+
   return (
     
     <div>
-      <p style = {{marginLeft : '490px', marginTop : '30px'}}>Lütfen size doğru ürünleri sergileyebilmemiz için aşağıdan alerjen(lerinizi) seçiniz.</p>
+      <p style = {{marginLeft : '465px',marginRight : '475px', marginTop : '30px', border : "2px solid red", backgroundColor : '#ff9999'}}>Lütfen size doğru ürünleri sergileyebilmemiz için aşağıdan alerjen(lerinizi) seçiniz.</p>
       <FormGroup>
         {alergens.map(alergen => {
           return(
             <div key = {alergen.id}>
-              <FormControlLabel sx = {{marginLeft:'710px'}} control={<Checkbox default />} label={alergen.name} />
+              <FormControlLabel sx = {{marginLeft:'710px'}} control={<Checkbox default/>} label={alergen.name} onChange = {() => handleChange("data")}/>
             </div>
           );
         })}
       </FormGroup>
-
-
     </div>
   );
 }

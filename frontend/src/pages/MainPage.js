@@ -1,10 +1,10 @@
+import { height } from '@mui/system';
 import { useState, useEffect } from 'react'
+import Box from '@mui/material/Box'
 export default function MainPage () {
 
 const [foods, setFoods] = useState([]);
 const [images, setImages] = useState('');
-
-
 
 useEffect(() => {
     fetch('http://localhost:8080/api/foods/getAll')
@@ -19,9 +19,13 @@ useEffect(() => {
             
             
             return (<div key = {food.id}>
-                <h2>{food.name}</h2>
-                <img src = {food.image} style = {{width : "100px"}}/>
-                <h4>fiyatı = {food.prize}</h4>
+                    <div style = {{width : '170px' , height : '170px', }}>
+                        <Box sx = {{width : '300px' , backgroundColor : '#FF9999',border : "2px solid red"}}>
+                        <img src = {food.image} alt = {"food side"} style = {{width : "100px", marginLeft: '30px',marginTop: '10px'}}/>
+                        <h4>{food.name}</h4>
+                        <h4>fiyatı = {food.prize} TL</h4>
+                        </Box>
+                    </div>
             </div>);
 
 
