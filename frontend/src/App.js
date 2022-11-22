@@ -1,12 +1,12 @@
-import { React } from 'react';
-import Header from './Header';
-import SlidePics from './SlidePics';
-import { Typography } from '@mui/material'
+import React, {useState, useEffect} from 'react';
 import AlergenSelect from './pages/AlergenSelect';
 import './App.css';
-import ImageSlider from "./ImageSlider";
+import MainPage from './pages/MainPage';
 
-const App = () => {
+function App () {
+
+  const [alergens, setAlergens] = useState([]);
+  const [admins, setAdmins] = useState([]);
 
   return (
     <div>

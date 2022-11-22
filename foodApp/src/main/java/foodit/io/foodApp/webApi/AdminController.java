@@ -3,6 +3,7 @@ package foodit.io.foodApp.webApi;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import foodit.io.foodApp.business.abstracts.AdminService;
 import foodit.io.foodApp.entites.concretes.Admin;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/admins")
 public class AdminController {
