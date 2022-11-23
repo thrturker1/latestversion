@@ -13,9 +13,7 @@ export default function CheckboxLabels () {
     .then(response => setAlergens(response))
 } , [])
 
-  const handleChange = (data) => {
-
-  }
+  
 
   return (
     
@@ -25,7 +23,7 @@ export default function CheckboxLabels () {
         {alergens.map(alergen => {
           return(
             <div key = {alergen.id}>
-              <FormControlLabel sx = {{marginLeft:'710px'}} control={<Checkbox default/>} label={alergen.name} onChange = {() => handleChange("data")}/>
+              <FormControlLabel sx = {{marginLeft:'710px'}} control={<Checkbox default/>} label={alergen.name} />
             </div>
           );
         })}

@@ -1,6 +1,7 @@
-import { height } from '@mui/system';
 import { useState, useEffect } from 'react'
 import Box from '@mui/material/Box'
+import { Link } from 'react-router-dom';
+
 export default function MainPage () {
 
 const [foods, setFoods] = useState([]);
@@ -22,7 +23,9 @@ useEffect(() => {
                     <div style = {{width : '170px' , height : '170px', }}>
                         <Box sx = {{width : '300px' , backgroundColor : '#FF9999',border : "2px solid red"}}>
                         <img src = {food.image} alt = {"food side"} style = {{width : "100px", marginLeft: '30px',marginTop: '10px'}}/>
+                        <Link to = "/foodpage">
                         <h4>{food.name}</h4>
+                        </Link>
                         <h4>fiyatı = {food.prize} TL</h4>
                         </Box>
                     </div>

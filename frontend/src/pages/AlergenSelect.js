@@ -4,6 +4,8 @@ import { Typography } from "@mui/material";
 import CheckBox from "./components/CheckBox";
 import ImageSlider from "./components/ImageSlider";
 import EnterButton from "./components/EnterButton.js";
+import {Link , Routes , Route} from 'react-router-dom';
+import MainPage from "./MainPage";
 
 const App = () => {
   const [alergens, setAlergens] = useState([]);
@@ -28,7 +30,7 @@ const App = () => {
 
   return (
     <div>
-        <div style = { navbarStyle }>
+      <div style = { navbarStyle }>
         <Header/>
         </div>
         <div style={containerStyles}>
@@ -36,7 +38,10 @@ const App = () => {
             
         </div>
         {alergens} = <CheckBox/>
-        <EnterButton/>
+        <Link to = "/mainpage">
+          <EnterButton/>
+        </Link>
+        
     </div>
 
     
